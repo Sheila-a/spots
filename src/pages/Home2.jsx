@@ -2,22 +2,40 @@ import { avatar } from '../assets';
 import data from '../data/data';
 import Layout from '../layout/Layout';
 
-const Home = () => {
+const Home2 = () => {
   return (
     <Layout>
       <div className='mx-[5vw] '>
-        <div className='flex md:flex-row flex-col md:items-stretch items-center pb-6 mb-6 border-b border-[#a4a096] pt-5 gap-5 w-full'>
+        <div className=' flex md:flex-row flex-col md:items-stretch items-center pb-6 mb-6 border-b border-[#a4a096] pt-5 gap-5 w-full'>
           <div className=''>
             <img
               src={avatar}
               alt=''
-              className=' rounded-xl w-[150px] md:w-[200px]'
+              className=' rounded-xl w-[150px] md:w-[250px] h-full'
             />
           </div>
           <div className=' w-full flex flex-col justify-between'>
-            <div className='md:text-left text-center'>
-              <h3 className='text-3xl font-semibold'>Bessie Coleman</h3>
-              <p className='font-light text-xl text-[#63615c]'>Civil Aviator</p>
+            <div className='md:text-left text-center md:relative'>
+              <div className='md:absolute lg:block hidden top-[-40px] right-[25vw]  bg-black text-white text-sm rounded-md px-4 py-2 shadow-md w-[370px] z-10'>
+                <p className='leading-tight'>
+                  <strong>Note from designer:</strong>
+                  <br />
+                  <span className='font-light'>
+                    Maximum three lines per name and description, and after that
+                    the text should be cut with ellipsis in the end
+                  </span>
+                </p>
+                <div className='absolute bottom-[-6px] left-6 w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-black'></div>
+              </div>{' '}
+              <h3 className='text-3xl font-medium xl:w-2/5 lg:w-3/5'>
+                Aliaune Damala Bouga Time Bongo Puru Nacka Lu Lu Lu Badara
+                Akon...
+              </h3>
+              <p className='font-light text-lg text-[#63615c] xl:w-2/5 lg:w-3/5'>
+                Known mononymously as Akon (/ˈeɪkɒn/), is a Senegalese-American
+                singer, record producer, and entrepreneur. An influential figure
+                in modern world...
+              </p>
             </div>
             <div className='flex md:flex-row flex-col gap-4 justify-between items-center w-full'>
               <span className='flex items-center text-[#63615c] gap-2'>
@@ -48,7 +66,8 @@ const Home = () => {
                 <p>Edit Profile</p>
               </span>
               <button className='bg-[#212121] md:w-fit w-full rounded-lg p-5 py-3 text-[#FCF5E5]'>
-                <a href='/a' className='flex items-center justify-center gap-3'>
+                <a href='/' className='flex items-center justify-center gap-3'>
+                  {' '}
                   <svg
                     width='14'
                     height='14'
@@ -105,4 +124,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home2;
